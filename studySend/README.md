@@ -27,7 +27,7 @@ docker的镜像实际上由一层一层的文件系统组成，这种层级的�
 `Bootfs(Boot File System)`主要包含 `BootLoader` 和 `kernel`, `BootLoader`主要是引导加载 `Kernel`, Linux刚启动时会加载`bootfs`文件系统，在Docker镜像的最底层是boots。这一层与我们典型的Linux/Unix系统是一样的，包含boot加载器和内核。当boot加载完成之后整个内核就都在内存中了，此时内存的使用权已由bootfs转交给内核，此时系统也会卸载bootfs,
 `RootFs (Root File System)`，在bootfs之上。包含的就是典型Linux.系统中的 /dev, /proc, /bin, /etc 等标准目录和文件。roots就是各种不同的操作系统发行版，比如`Ubuntu , Centos`等等。
 
-![docker镜像加载原理](images\docker镜像加载原理.png)
+![docker镜像加载原理](https://github.com/VisDeng/Docker/blob/master/studySend/images/docker%E9%95%9C%E5%83%8F%E5%8A%A0%E8%BD%BD%E5%8E%9F%E7%90%86.png)
 
 平时安装进虚拟机的 CentOS 都是好几G，为什么Docker这里才 200M！
 
